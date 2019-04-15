@@ -1,0 +1,609 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thời trang MM Thành Công | MShopkeeper.vn </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="Shortcut Icon" type="image/x-icon" href="https://demoquanao.mshopkeeper.vn/favicon.ico">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="/Content/css/common.css" rel="stylesheet" />
+    <link href="/Content/css/modal.css" rel="stylesheet" />
+    <link href="/Content/css/Dictionary/customer.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="body-left header-left">
+                <div class="logo">
+                    <a href="#">
+                        <img src="/Content/images/logo-mshopkeeper.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="body-right header-right">
+                <div>
+                    <div class="header-title">
+                        <h2>
+                            Khách hàng
+                        </h2>
+                    </div>
+                    <div class="header-right-content">
+                        <div class="header-item">
+                            <div class="start-user o-hide">
+                                <a href="#" class="b-right">Bắt đầu sử dụng</a>
+                            </div>
+                            <div class="select-category o-hide sup-menu" id="btn-category"><span>Thời trang MM Thành Công</span></div>
+                            <div class="sub-menu-header sub-menu-select-category e-click-out sub-menu" parent="btn-category">
+                                <a>Thời trang MM Thành Công</a>
+                                <a>Kho tổng</a>
+                            </div>
+                            <div class="user-info d-flex o-hide sup-menu" id="btn-user-info">
+                                <img src="../../Content/images/Image.jfif" alt="" />
+                                <div class="name-user">Lâm Thế Anh</div>
+                            </div>
+                            <div class="sub-menu-header sub-menu-user-info e-click-out sub-menu" parent="btn-user-info">
+                                <a class="icon-change-password"><span>Thay đổi mật khẩu</span></a>
+                                <a class="icon-feedback"><span>Góp ý với nhà phát triển</span></a>
+                                <a class="icon-logout"><span>Đăng xuất</span></a>
+                            </div>
+                            <div class="b-left icon-top-header icon-bell sup-menu btn-drop-down" id="btn-notification" title="Thông báo">
+                            </div>
+                            <div class="sub-menu-notification e-click-out sub-menu" parent="btn-notification">
+                                <div class="sub-menu-row">
+                                    <a class="btn-show-modal btn-notification" id="noti1">
+                                        <div class="row-icon-bell"></div>
+                                        <div class="row-content">
+                                            <div class="datetime">22/12/2018 10:34</div>
+                                            <div class="title">10 ngày ưu đãi cho khách hàng khi giới thiệu bạn bè sử dụng</div>
+                                            <div class="subContent">10 ngày ưu đãi cho khách hàng khi giới thiệu bạn bè sử dụng</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="sub-menu-row">
+                                    <a class="btn-show-modal btn-notification" id="noti2">
+                                        <div class="row-icon-bell"></div>
+                                        <div class="row-content">
+                                            <div class="datetime">22/11/2018 10:34</div>
+                                            <div class="title">Tặng voucher 15% và 3 tháng sử dụng cho khách hàng thân thiết nhân dịp MISA nhận giải thưởng quốc tế</div>
+                                            <div class="subContent">Tặng voucher 15% và 3 tháng sử dụng cho khách hàng thân thiết nhân dịp MISA nhận giải thưởng quốc tế</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="sub-menu-row row-bottom">
+                                    <a href="#">Xem tất cả thông báo</a>
+                                </div>
+                            </div>
+                            <div class="b-left icon-top-header icon-help" title="Trợ giúp">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main d-flex">
+            <!-- #region slidebar -->
+            <div class="body-left slidebar">
+                <a class="slidebar-row d-flex" id="home">
+                    <span class=" slidebar-icon icon  icon-home"></span>
+                    <span class="slidebar-row-name">Tổng quan</span>
+                </a>
+                <a class="slidebar-row d-flex sup-menu" id="report">
+                    <span class=" slidebar-icon icon  icon-report"></span>
+                    <span class="slidebar-row-name">Báo cáo</span>
+                </a>
+                <div class="wrap-children e-click-out sub-menu" parent="report">
+                    <ul class="wrap-children-list">
+                        <li>
+                            <a href="" class="wrap-children-row">Bán hàng</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Mua hàng</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Kho</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Công nợ</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Quỹ tiền</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Lợi nhuận</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="slidebar-row d-flex" id="deliveryledger">
+                    <span class=" slidebar-icon icon  icon-deliveryledger"></span>
+                    <span class="slidebar-row-name">Sổ giao hàng</span>
+                </a>
+                <a class="slidebar-row d-flex sup-menu" id="purchares">
+                    <span class=" slidebar-icon icon  icon-purchares"></span>
+                    <span class="slidebar-row-name">Mua hàng</span>
+                </a>
+                <div class="wrap-children e-click-out sub-menu" parent="purchares">
+                    <ul class="wrap-children-list">
+                        <li>
+                            <a href="" class="wrap-children-row">Nhập hàng</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Trả lại hàng mua</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Trả nợ</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="slidebar-row d-flex sup-menu" id="stock">
+                    <span class=" slidebar-icon icon  icon-stock"></span>
+                    <span class="slidebar-row-name">Kho</span>
+                </a>
+                <div class="wrap-children e-click-out sub-menu" parent="stock">
+                    <ul class="wrap-children-list">
+                        <li>
+                            <a href="" class="wrap-children-row">Nhập kho</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Xuất kho</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Chuyển kho</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Lệnh điều chuyển</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Kiểm kê kho</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Tổng hợp tồn kho</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row row-price">Tính giá xuất kho</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="slidebar-row d-flex sup-menu" id="fund">
+                    <span class=" slidebar-icon icon  icon-fund"></span>
+                    <span class="slidebar-row-name">Quỹ tiền</span>
+                </a>
+                <div class="wrap-children e-click-out sub-menu" parent="fund">
+                    <ul class="wrap-children-list group">
+                        <ul class="sub-ul-group">
+                            <li class="sub-menu-group">TIỀN MẶT</li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Thu, chi tiền mặt</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Kiểm kê tiền mặt</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Sổ chi tiết tiền mặt</a>
+                            </li>
+                        </ul>
+                        <ul class="sub-ul-group">
+                            <li class="sub-menu-group">TIỀN GỬI</li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Thu, chi tiền gửi</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Đối chiếu tiền gửi</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Sổ chi tiết tiền gửi</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <a class="slidebar-row d-flex">
+                    <span class=" slidebar-icon icon  icon-receipt"></span>
+                    <span class="slidebar-row-name">Chi phí</span>
+                </a>
+                <a class="slidebar-row d-flex sup-menu" id="promotion">
+                    <span class=" slidebar-icon icon  icon-promotion"></span>
+                    <span class="slidebar-row-name">Khuyến mãi</span>
+                </a>
+                <div class="wrap-children e-click-out sub-menu" parent="promotion">
+                    <ul class="wrap-children-list">
+                        <li>
+                            <a href="" class="wrap-children-row">Chương trình KM</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Thẻ voucher</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="slidebar-row d-flex sup-menu active" id="dictionary">
+                    <span class=" slidebar-icon icon  icon-dictionary"></span>
+                    <span class="slidebar-row-name">Danh mục</span>
+                </a>
+                <div class="wrap-children wrap-children-lg e-click-out sub-menu" parent="dictionary">
+                    <div class="wrap-children-col">
+                        <ul class="wrap-children-list">
+                            <ul class="sub-ul-group">
+                                <li class="sub-menu-group">Hàng hóa</li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Nhóm hàng hóa</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Hàng hóa</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Đơn vị tính</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">In tem mã</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Bảng giá</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Kho</a>
+                                </li>
+                            </ul>
+                            <ul class="sub-ul-group">
+                                <li class="sub-menu-group">Khách hàng</li>
+                                <li class="">
+                                    <a href="#" class="wrap-children-row">Nhóm khách hàng</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="wrap-children-row">Khách hàng</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Hạng thẻ</a>
+                                </li>
+                            </ul>
+                            <ul class="sub-ul-group">
+                                <li class="sub-menu-group">Nhà cung cấp</li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Nhóm nhà cung cấp</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Nhà cung cấp</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Đối tác giao hàng</a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="wrap-children-col">
+                        <ul class="wrap-children-list">
+                            <ul class="sub-ul-group">
+                                <li class="sub-menu-group">Thu, chi</li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Mục thu</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Mục chi</a>
+                                </li>
+                            </ul>
+                            <ul class="sub-ul-group">
+                                <li class="sub-menu-group">Khác</li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Nhân viên</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Két đựng tiền</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Ca làm việc</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Thẻ ngân hàng</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="wrap-children-row">Kênh bán hàng</a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <a class="slidebar-row d-flex sup-menu" id="setting">
+                    <span class=" slidebar-icon icon  icon-setting"></span>
+                    <span class="slidebar-row-name">Thiết lập</span>
+                </a>
+                <div class="wrap-children e-click-out sub-menu" parent="setting">
+                    <ul class="wrap-children-list group">
+                        <ul class="sub-ul-group">
+                            <li class="sub-menu-group">Thiết lập</li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Thông tin chung</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Mua hàng/Bán hàng</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Quy tắc đánh số chứng từ</a>
+                            </li>
+                        </ul>
+                        <ul class="sub-ul-group">
+                            <li class="sub-menu-group">Số dư ban đầu</li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Tồn kho</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Công nợ khách hàng</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Công nợ nhà cung cấp</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Công nợ đối tác giao hàng</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Quỹ tiền</a>
+                            </li>
+                        </ul>
+                        <ul class="sub-ul-group">
+                            <li class="sub-menu-group">Khác</li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Quản lý vai trò</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Nhật ký truy cập</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Hủy hóa đơn</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="wrap-children-row">Xuất khẩu chứng từ</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <a class="slidebar-row d-flex sup-menu" id="help">
+                    <span class=" slidebar-icon icon  icon-help"></span>
+                    <span class="slidebar-row-name">Trợ giúp</span>
+                </a>
+                <div class="wrap-children e-click-out sub-menu" parent="help">
+                    <ul class="wrap-children-list">
+                        <li>
+                            <a href="" class="wrap-children-row">Trung tâm trợ giúp</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Điều khoản sử dụng</a>
+                        </li>
+                        <li>
+                            <a href="" class="wrap-children-row">Thông tin sản phẩm</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="slidebar-row d-flex" href="">
+                    <span class=" slidebar-icon icon  icon-omnichannel"></span>
+                    <span class="slidebar-row-name">OCM</span>
+                </a>
+                <a class="slidebar-row d-flex" href="">
+                    <span class=" slidebar-icon icon  icon-fiveshop"></span>
+                    <span class="slidebar-row-name">5Shop</span>
+                </a>
+                <a class="slidebar-row d-flex b-top" href="">
+                    <span class=" slidebar-icon icon  icon-goods"></span>
+                    <span class="slidebar-row-name">Hàng Hóa</span>
+                </a>
+
+            </div>
+            <!-- #endregion -->
+            <!-- Main content -->
+            <div class="body-right main-content">
+                <div class="box-dictionary">
+                    <!--#region toolbar -->
+                    <div class="d-flex o-hide box-toolbar">
+                        <div class="b-right d-flex btn-toolbar btn-add btn-tool-customer btn-show-modal" title="Ctrl+1" type-modal="1" action-modal="1">
+                            <div class="icon-toolbar"></div>
+                            Thêm mới
+                        </div>
+                        <div class="b-right d-flex btn-toolbar btn-duplicate btn-tool-customer btn-show-modal" type-modal="1" action-modal="2">
+                            <div class="icon-toolbar"></div>
+                            Nhân bản
+                        </div>
+                        <div class="b-right d-flex btn-toolbar btn-edit btn-tool-customer btn-show-modal" type-modal="1" action-modal="3">
+                            <div class="icon-toolbar"></div>
+                            Sửa
+                        </div>
+                        <div class="b-right d-flex btn-toolbar btn-delete btn-message-box btn-show-modal" type-modal="3" type-icon-modal="2" action-modal="1">
+                            <div class="icon-toolbar"></div>
+                            Xóa
+                        </div>
+                        <div class="b-right btn-toolbar d-flex btn-reload">
+                            <div class="icon-toolbar"></div>
+                            Nạp
+                        </div>
+                        <div class="btn-toolbar d-flex b-right btn-input btn-show-modal" type-modal="1" action-modal="4">
+                            <div class="icon-toolbar"></div>
+                            Nhập khẩu
+                        </div>
+                        <div class="btn-toolbar d-flex btn-output">
+                            <div class="icon-toolbar"></div>
+                            Xuất khẩu
+                        </div>
+                    </div>
+                    <!-- #endregion -->
+                    <!-- khách hàng -->
+                    <div class="customers">
+                        <div class="customers-table">
+                            <div class="table-thead customer-table-thead">
+                                <div class="column-resizable table-thead-column customer-table-column-check">
+                                    <label class="lb-checkbox">
+                                        <input type="checkbox" class="check-all" />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="column-resizable table-thead-column customer-table-column-customerCode">
+                                    <div class="table-thead-column-content">Mã khách hàng</div>
+                                    <div class="box-filter">
+                                        <div class="btn-filter sup-menu" id="filter-customerCode"><span>*</span></div>
+                                        <div class="input-filter">
+                                            <input type="text" name="filterCustomerCode" field="CustomerCode" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="column-resizable table-thead-column customer-table-column-customerName">
+                                    <div class="table-thead-column-content">Tên khách hàng</div>
+                                    <div class="box-filter">
+                                        <div class="btn-filter sup-menu" id="filter-customerName"><span>*</span></div>
+                                        <div class="input-filter">
+                                            <input type="text" name="filterCustomerName" field="CustomerName" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="column-resizable table-thead-column customer-table-column-customerPhone">
+                                    <div class="table-thead-column-content">Điện thoại</div>
+                                    <div class="box-filter">
+                                        <div class="btn-filter sup-menu" id="filter-phone"><span>*</span></div>
+                                        <div class="input-filter">
+                                            <input type="text" name="filterCustomerPhone" field="PhoneNumber" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="column-resizable table-thead-column customer-table-column-customerBirthday">
+                                    <div class="table-thead-column-content">Ngày sinh</div>
+                                    <div class="box-filter">
+                                        <div class="btn-filter sup-menu" id="filter-birthday"><span>*</span></div>
+                                        <div class="input-filter input-date">
+                                            <input type="text" name="filterCustomerBirthday" field="Birthday" />
+                                            <div class="btn-drop-down">
+                                                <div class="icon-select-date" parent="filterCustomerBirthday"></div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="column-resizable table-thead-column customer-table-column-customerGroup">
+                                    <div class="table-thead-column-content">Nhóm khách hàng</div>
+                                    <div class="box-filter">
+                                        <div class="btn-filter sup-menu" id="filter-customerGroup"><span>*</span></div>
+                                        <div class="input-filter">
+                                            <input type="text" name="filterCustomerGroup" field="CustomerGroup" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="column-resizable table-thead-column customer-table-column-Note">
+                                    <div class="table-thead-column-content">Ghi chú </div>
+                                    <div class="box-filter">
+                                        <div class="btn-filter sup-menu" id="filter-note"><span>*</span></div>
+                                        <div class="input-filter">
+                                            <input type="text" name="filterCustomerNote" field="Note" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="column-resizable table-thead-column customer-table-column-customerStatus">
+                                    <div class="table-thead-column-content">Trạng thái</div>
+                                    <div class="box-filter input-select">
+                                        <div class="btn-filter sup-menu" id="filter-status"><span>*</span></div>
+                                        <div class="d-flex input-filter">
+                                            <input type="text" class="show-select-box" name="filterCustomerStatus" placeholder="" field="Status" />
+                                            <div class="btn-drop-down sup-menu select-menu" id="filterCustomerStatus">
+                                                <div class="icon-arrow-down"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-scroll"></div>
+                            </div>
+                            <div class="table-tbody customer-table-tbody">
+                                <table></table>
+                                <div class="load-data-form">
+                                    <div style="position:relative;width:100%;height:100%;">
+                                        <div class="animation-load"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagging-toolbar">
+                            <div class="pagging-toolbar-content">
+                                <div class="pagging-toolbar-content-left">
+                                    <a class="MISAbtn btn-panigate btn-begin">
+                                        <span class="icon icon-begin"></span>
+                                    </a>
+                                    <a class="MISAbtn btn-panigate btn-preview">
+                                        <span class="icon icon-preview"></span>
+                                    </a>
+                                    <label>Trang</label>
+                                    <input type="text" class="number-page" value="1" />
+                                    <label>trên <span id="total-page">1</span></label>
+                                    <a class="MISAbtn btn-panigate btn-next">
+                                        <span class="icon icon-next"></span>
+                                    </a>
+                                    <a class="MISAbtn btn-panigate btn-end">
+                                        <span class="icon icon-end"></span>
+                                    </a>
+                                    <a class="MISAbtn active btn-reload">
+                                        <span class="icon icon-reload"></span>
+                                    </a>
+                                    <select class="number-result">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50" selected>50</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </div>
+                                <div class="pagging-toolbar-content-right">
+                                    Hiển thị <span id="start-list">1</span> - <span id="end-list">15</span> trên <span id="total-record">15</span> kết quả
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-filter-menu e-click-out">
+                <div class="sub-filter-row"></div>
+            </div>
+            <div class="toolbar-right-click e-click-out">
+                <div class="toolbar-row d-flex btn-tool-customer btn-show-modal" type-modal="1" action-modal="1">
+                    <div class="icon-toolbar-row icon-add"></div>
+                    <div class="content-toolbar-row">Thêm mới</div>
+                </div>
+                <div class="toolbar-row d-flex btn-duplicate btn-tool-customer btn-show-modal" type-modal="1" action-modal="2">
+                    <div class="icon-toolbar-row icon-duplicate"></div>
+                    <div class="content-toolbar-row">Nhân bản</div>
+                </div>
+                <div class="toolbar-row d-flex btn-edit btn-tool-customer btn-show-modal" type-modal="1" action-modal="3">
+                    <div class="icon-toolbar-row icon-edit"></div>
+                    <div class="content-toolbar-row">Sửa</div>
+                </div>
+                <div class="toolbar-row d-flex btn-delete btn-message-box btn-show-modal" type-modal="3" action-modal="2">
+                    <div class="icon-toolbar-row icon-delete"></div>
+                    <div class="content-toolbar-row">Xóa</div>
+                </div>
+                <div class="toolbar-row d-flex">
+                    <div class="icon-toolbar-row icon-reload"></div>
+                    <div class="content-toolbar-row">Nạp</div>
+                </div>
+            </div>
+
+            <!--End main-->
+        </div>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/Scripts/enum.js"></script>
+    <script src="/Scripts/common.js"></script>
+    <script src="/Scripts/modal.js"></script>
+    <script src="/Scripts/service.js"></script>
+    <script src="/Scripts/customer.js"></script>
+    <!--<script src="/Scripts/Dictionary/customerService.js"></script>-->
+</body>
+</html>
+
+
+
+

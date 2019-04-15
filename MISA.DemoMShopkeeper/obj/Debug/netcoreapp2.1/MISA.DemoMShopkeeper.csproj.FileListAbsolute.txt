@@ -1,0 +1,14 @@
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\bin\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.deps.json
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\bin\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.runtimeconfig.json
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\bin\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.runtimeconfig.dev.json
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\bin\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.dll
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\bin\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.pdb
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\obj\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.csproj.CoreCompileInputs.cache
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\obj\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.RazorAssemblyInfo.cache
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\obj\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.RazorAssemblyInfo.cs
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\obj\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.AssemblyInfoInputs.cache
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\obj\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.AssemblyInfo.cs
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\obj\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.RazorTargetAssemblyInfo.cache
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\obj\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.dll
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\obj\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.pdb
+C:\Application Desktop\My Project\MISA.DemoMShopkeeper\MISA.DemoMShopkeeper\obj\Debug\netcoreapp2.1\MISA.DemoMShopkeeper.csprojAssemblyReference.cache

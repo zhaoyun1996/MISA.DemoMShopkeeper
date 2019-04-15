@@ -1,0 +1,1262 @@
+﻿/*#region general */
+@font-face {
+    font-family: 'Roboto', sans-serif;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+* {
+    outline: none !important;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto',Tahoma,sans-serif !important;
+    font-size: 13px;
+    min-width: 1024px;
+    min-height: 768px;
+    overflow: hidden;
+}
+/*Style lại label của bootstrap*/
+label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+/*Chia làm 2 cột*/
+.col-6 {
+    width: 50%;
+    line-height: 35px;
+    float: left;
+}
+/*Lấy toàn bộ độ rộng*/
+.col-12 {
+    width: 100%;
+    float: left;
+}
+
+a:hover {
+    text-decoration: none;
+}
+/*Trường bắt buộc có dấu * màu đỏ*/
+.icon-require {
+    color: #df4646;
+}
+
+.content-warning {
+    color: #df4646;
+    font-weight: bold;
+}
+/*style lại focus vào textarea và input*/
+textarea, input {
+    border: 1px solid #d0d0d0;
+}
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #77B0E2 !important;
+    }
+
+
+.input-error,
+.input-error:focus {
+    border-color: red !important;
+}
+/*màu input readonly*/
+input[readonly] {
+    background: #e5e6eb;
+}
+
+.date {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.o-hide {
+    overflow: hidden;
+}
+
+.b-right {
+    border-right: 1px solid #e0e0e0;
+}
+
+.b-top {
+    border-top: 1px solid black;
+}
+
+.b-left {
+    border-left: 1px solid #e0e0e0;
+}
+/*Set kích thước phần bên trái (logo + slidebar)*/
+.body-left {
+    width: 140px;
+}
+/*Set kích thước phần bên phải (header + nội dung)*/
+.body-right {
+    width: calc(100% - 140px);
+}
+
+.main {
+    height: calc(100vh - 52px);
+}
+/*màu dòng stt chẵn trong bảng*/
+.row-white {
+    background: #fff;
+}
+/*màu dòng stt lẻ trong bảng*/
+.row-grey {
+    background: #f6f6f6;
+}
+/*màu dòng được chọn trong bảng*/
+.row-checked td {
+    background: #c3ecff !important;
+}
+
+.sup-menu {
+    cursor: pointer;
+}
+
+/*Update 27/12*/
+/*Style bảng dữ liệu chung*/
+
+.table-thead {
+    border-left: 1px solid #d0d0d0;
+}
+
+.table-thead-column,
+.table-tbody-column {
+    border-right: #d0d0d0;
+}
+
+.column-resizable {
+    border-right: 1px solid #d0d0d0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+/*Độ rộng và style lại border của cột có thể thay đổi kich thước*/
+.ui-resizable-e {
+    width: 15px !important;
+    cursor: col-resize;
+}
+
+.table-thead-column-content {
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    font-weight: bold;
+}
+/*Thân bảng*/
+.table-tbody {
+    position: absolute;
+    left: 0;
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: 54px;
+    overflow: auto;
+}
+
+    .table-tbody table {
+        box-sizing: border-box;
+    }
+
+        .table-tbody table tr {
+            height: 35px;
+            line-height: 35px;
+            border: 1px solid #d0d0d0;
+            border-left: none;
+        }
+
+            .table-tbody table tr:hover {
+                background: #EAEFF4;
+            }
+
+            .table-tbody table tr.checked {
+                background: #C3ECFF;
+            }
+
+            .table-tbody table tr td {
+                padding: 0px 10px;
+                cursor: default;
+            }
+
+                .table-tbody table tr td a:hover {
+                    cursor: pointer;
+                    text-decoration: underline !important;
+                }
+
+/*Hiệu ứng load dữ liệu form*/
+.load-data-form {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.animation-load {
+    background: url('../images/loading.gif') no-repeat center center;
+    z-index: 500;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+}
+
+/*Pagging Toolbar*/
+/*Toolbar dưới bảng*/
+.pagging-toolbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 53px;
+    border: 1px solid #d0d0d0;
+    padding: 10px;
+}
+
+.pagging-toolbar-content {
+    position: relative;
+}
+/*Chứa các nút chuyển trang và chọn số lượng dữ liệu hiển thị*/
+.pagging-toolbar-content-left {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    display: flex;
+}
+/*Thông báo kết quả hiển thị*/
+.pagging-toolbar-content-right {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+
+.pagging-toolbar-content-left label {
+    margin: 4px 15px 0 5px;
+    font-weight: normal;
+}
+/*input nhập số trang*/
+.pagging-toolbar-content-left input {
+    width: 48px;
+    text-align: center;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+}
+/*Chọn số dữ liệu hiển thị trên 1 trang*/
+.pagging-toolbar-content-left select {
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+}
+/*Style các button*/
+.MISAbtn {
+    border: 1px solid #92bdd0;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border: 1px solid #92bdd0;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+    .MISAbtn.active {
+        border-color: #247ba0;
+    }
+/*icon chung của button. Cùng background chỉ set lại vị trí*/
+.icon {
+    background: url('../images/common-icon.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: auto 0;
+}
+/*Khi nút được kích hoạt. màu icon thay đổi*/
+.MISAbtn.active .icon {
+    background-position-y: -124px !important;
+}
+
+.icon-begin {
+    background-position: -649px -149px;
+}
+
+.icon-preview {
+    background-position: -700px -149px;
+}
+
+.icon-next {
+    background-position: -749px -149px;
+}
+
+.icon-end {
+    background-position: -798px -149px;
+}
+
+.icon-reload {
+    background-position: -848px -149px;
+}
+
+.icon-continue {
+    background-position: -403px -127px;
+}
+
+.number-result {
+    text-align-last: center;
+}
+
+.content-button {
+    padding: 0 4px 0 8px;
+}
+/*filter*/
+/*Style hộp lọc dữ liệu từng cột của bảng dữ liệu*/
+.box-filter {
+    position: relative;
+    width: 100%;
+    height: 35px;
+}
+    /*Nút chọn điều kiện lọc*/
+    .box-filter .btn-filter {
+        width: 34px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        position: absolute;
+        top: 0;
+        left: 1px;
+        border: 1px solid #e1e1e1;
+        background: #fff;
+    }
+    /*Nhập nội dung lọc*/
+    .box-filter .input-filter {
+        position: absolute;
+        top: 0;
+        right: 2px;
+        left: 36px;
+        height: 35px;
+        display: flex;
+    }
+/*Menu chọn điều kiện lọc*/
+.sub-filter-menu {
+    position: fixed;
+    z-index: 100;
+    border: 1px solid #c3c3c3;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 20px -5px #333;
+    display: none;
+}
+    /*Từng dòng menu chọn điều kiện lọc*/
+    .sub-filter-menu .sub-filter-row {
+        padding: 1px 10px 1px 20px;
+        line-height: 31px;
+        color: #212121;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+        .sub-filter-menu .sub-filter-row:hover {
+            background: #247BA0;
+            color: #fff;
+        }
+
+.input-filter input,
+.box-filter select,
+.MISA-dropdown {
+    width: 100%;
+    padding: 5px 10px !important;
+    height: 35px;
+    border: 1px solid #d0d0d0;
+}
+
+    .box-filter select option.active {
+        background: #5FA2DD;
+        color: #fff;
+    }
+
+    .box-filter select option:hover {
+        background: #247BA0;
+        color: #fff;
+    }
+
+.input-date .btn-drop-down {
+    background: #fff !important;
+}
+
+/*Datetime Picker*/
+.select-date {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+/*.ui-datepicker {
+    position: absolute !important;
+    top: 36px !important;
+    left: 0px !important;
+}*/
+/*Update 2/1/2019*/
+/*Menu cấp 2 của slidebar có 1 cột*/
+.wrap-children {
+    width: 235px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 140px;
+    background: #00577b;
+    z-index: 999;
+    display: none;
+}
+/*Hiển thị menu cấp 2 khi chọn slidebar*/
+.wrap-children-show {
+    display: block !important;
+}
+/*Menu cấp 2 có 2 cột*/
+.wrap-children-lg {
+    width: 433px !important;
+}
+
+.wrap-children-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+    .wrap-children-list.group {
+        padding: 20px;
+    }
+/*Nhóm menu con trong menu cấp 2*/
+.sub-ul-group {
+    padding: 0 0 20px 0;
+    list-style: none;
+}
+
+.wrap-children-col .sub-ul-group {
+    padding: 20px 0 0 0;
+}
+
+.sub-menu-group {
+    background-color: #004e6e !important;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #fff;
+    text-transform: uppercase;
+    padding-left: 16px;
+    font-weight: 700;
+    cursor: default !important;
+}
+/*1 cột trong menu cấp 2 có 2 cột*/
+.wrap-children-col {
+    margin-left: 20px;
+    width: 195px;
+    float: left;
+    min-height: 560px;
+    overflow: auto;
+}
+
+.wrap-children-list li {
+    height: 32px;
+    line-height: 32px;
+    width: 100%;
+}
+
+.wrap-children-row {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    margin-top: 4px;
+    text-decoration: none;
+    color: #b2d5e3;
+    padding: 2px 2px 2px 20px;
+}
+
+.row-price::before {
+    content: "";
+    display: block;
+    cursor: pointer;
+    width: 90%;
+    height: 1px;
+    background-color: #0a7aa6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*Select menu*/
+.sub-menu-dropdown {
+    position: fixed !important;
+    z-index: 300 !important;
+}
+
+.select-sub-menu {
+    background: #fff !important;
+}
+
+    .select-sub-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .select-sub-menu .sub-menu-row {
+        padding: 0 6px;
+        font: normal 13px Roboto;
+        line-height: 22px;
+        cursor: pointer;
+        position: relative;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #fff;
+    }
+/*.select-sub-menu .sub-menu-row:hover {
+            background: #0088c2;
+            color: #fff;
+        }*/
+
+
+/*Style input trong combobox*/
+.input-date input,
+.input-select-add input,
+.input-select input {
+    border-right: none !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+    /*Style nút dropdown khi focus vào input và datepicker*/
+    .input-date input:focus + .btn-drop-down,
+    .input-select input:focus + .btn-drop-down,
+    .input-select-add input:focus + .btn-drop-down,
+    .input-select-add input:focus + .btn-drop-down + .btn-add-new {
+        border-top-color: #77B0E2;
+        border-bottom-color: #77B0E2;
+    }
+
+        .input-date input:focus + .btn-drop-down,
+        .input-select input:focus + .btn-drop-down,
+        .input-select-add input:focus + .btn-drop-down + .btn-add-new {
+            border-right-color: #77B0E2;
+        }
+/*Style nút dropdown của combobox và datepicker*/
+.input-date .btn-drop-down,
+.input-select .btn-drop-down,
+.input-select-add .btn-drop-down,
+.input-select-add .btn-add-new {
+    width: 24px;
+    height: 35px;
+    border: 1px solid #d0d0d0;
+    border-right: none;
+    border-left: none;
+    cursor: pointer;
+}
+
+.input-date .btn-drop-down,
+.input-select .btn-drop-down {
+    border-right: 1px solid #d0d0d0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.input-select-add .icon-arrow-down,
+.input-select .icon-arrow-down {
+    background: url(../images/arrow-down-line.png) no-repeat;
+    margin: 15px 8px;
+    width: 10px;
+    height: 10px;
+}
+
+.input-select-add .btn-add-new {
+    border: 1px solid #d0d0d0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+    .input-select-add .btn-add-new .icon-add-new {
+        background: url('../images/quick-add.png') no-repeat;
+        width: 12px;
+        height: 19px;
+        margin: 10px 5px;
+    }
+
+
+li.checked {
+    background: #0088c2;
+    color: #fff;
+}
+/*Thông báo lỗi*/
+.btn-error {
+    width: 26px;
+    display: none;
+}
+
+.icon-error {
+    margin: 9px 4px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/exclamation.png') no-repeat;
+}
+/*#endregion */
+
+/*#region Header */
+.header {
+    width: 100%;
+    height: 52px;
+    position: relative;
+    line-height: 52px;
+}
+
+.header-right {
+    position: absolute;
+    top: 0;
+    left: 140px;
+}
+
+.logo {
+    background: #006189;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.header-title {
+    position: absolute;
+    top: 17px;
+    left: 21px;
+}
+
+    .header-title h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Roboto', Tahoma, sans-serif !important;
+    }
+/*Nội dung bên phải header*/
+.header-right-content {
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: calc(100% - 200px);
+}
+
+.header-item {
+    position: relative;
+}
+
+.start-user {
+    position: absolute;
+    right: 489px;
+    left: auto;
+    top: 0;
+}
+
+    .start-user a {
+        padding: 5px 20px;
+    }
+
+.select-category {
+    position: absolute;
+    right: 262px;
+    top: 10px;
+    cursor: pointer;
+}
+
+    .select-category span {
+        border: 1px solid #c3c3c3;
+        padding: 0 12px;
+        color: black;
+        display: flex;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 3px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+        .select-category span::after,
+        .name-user::after {
+            background: url('../images/arrow-down-line.png') no-repeat;
+            content: "";
+            margin-left: 8px;
+            width: 10px;
+            margin-top: 15px;
+        }
+/*Menu cấp 2 và dropdown ở header*/
+.sub-menu-header,
+.sub-menu-dropdown {
+    position: absolute;
+    top: 43px;
+    z-index: 999;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 0px rgba(51, 51, 51,0.6);
+    background: #f6f6f6;
+    padding: 0;
+    line-height: normal;
+    display: none;
+}
+
+    .sub-menu-header a {
+        border-bottom: 1px solid #dfdfdf;
+        color: #212121;
+        padding: 7px 8px 7px 14px;
+        font-weight: 700;
+        display: block;
+        cursor: pointer;
+    }
+
+        .sub-menu-header a:hover {
+            color: #5493B3;
+        }
+
+        .sub-menu-header a span {
+            padding-left: 20px;
+        }
+/*Chọn danh mục*/
+.sub-menu-select-category {
+    right: 250px;
+}
+/*Thông tin tài khoanr */
+.sub-menu-user-info {
+    right: 100px;
+}
+
+.user-info {
+    position: absolute;
+    top: 0;
+    right: 110px;
+    font-weight: 700;
+    /*font-family: Open Sans;*/
+}
+
+    .user-info img {
+        height: 28px;
+        margin: 11px 7px;
+        border-radius: 50%;
+    }
+
+.name-user {
+    display: flex;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 10px;
+}
+
+.icon-change-password {
+    background: url('../images/icon-change-password16.png') no-repeat;
+    background-position: 10px 7px;
+}
+
+.icon-feedback {
+    background: url('../images/icon-feedback.png') no-repeat;
+    background-position: 10px 7px;
+}
+
+.icon-logout {
+    background: url('../images/icon-logout16.png') no-repeat;
+    background-position: 10px 7px;
+}
+
+.icon-top-header {
+    position: absolute;
+    top: 0;
+    line-height: 52px;
+}
+/*Thông báo - tin tức*/
+.icon-bell {
+    right: 50px;
+    background: url('../images/notify-18.png') no-repeat;
+    background-position: center;
+    width: 46px;
+    height: 52px;
+    top: 0px;
+    padding: 10px;
+}
+
+    .icon-bell:hover {
+        background-image: url('../images/notify-hover-18.png');
+    }
+/*Menu cấp 2 thông báo*/
+.sub-menu-notification {
+    position: absolute;
+    top: 52px;
+    border-top: 3px solid #026b87;
+    right: 45px;
+    width: 330px;
+    z-index: 100;
+    display: none;
+}
+
+    .sub-menu-notification .sub-menu-row {
+        max-width: 330px;
+        height: 90px;
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 14px;
+        padding: 5px;
+        cursor: pointer;
+        border-bottom: 1px solid #dfdfdf;
+    }
+
+    .sub-menu-notification .row-icon-bell {
+        width: 50px;
+        height: 100%;
+        float: left;
+        background: url(../images/notify-item-24.png) center center no-repeat;
+    }
+
+    .sub-menu-notification .sub-menu-row .row-content {
+        margin-left: 50px;
+        padding-right: 5px;
+        line-height: normal;
+    }
+
+    .sub-menu-notification .row-content .datetime {
+        margin-top: 5px;
+        font-size: 12px;
+        color: #9a9a9a;
+    }
+
+    .sub-menu-notification .row-content .title {
+        color: #404040;
+        font-weight: bold;
+        padding: 2px 0 2px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        text-transform: uppercase;
+        -webkit-line-clamp: 1;
+        white-space: nowrap;
+    }
+
+    .sub-menu-notification .row-content .subContent {
+        overflow: hidden;
+        color: #404040;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    .sub-menu-notification .row-bottom {
+        height: 40px;
+        line-height: 30px;
+        text-align: center;
+        color: #026b87;
+        font-weight: bold;
+    }
+
+.icon-top-header.icon-help {
+    right: 0;
+    background: url('../images/icon_help_18.png') no-repeat;
+    background-position: center !important;
+    width: 46px;
+    height: 52px;
+    top: 0px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+    .icon-top-header.icon-help:hover {
+        background-image: url('../images/icon-help-18-hover.png');
+    }
+/*#endregion*/
+
+/*#region SlideBar */
+.slidebar a:hover {
+    color: #fff;
+    background: #00577b;
+    cursor: pointer;
+}
+
+.slidebar {
+    height: 100%;
+    background: #026b97;
+    position: relative;
+}
+/*các dòng slideBar*/
+.slidebar-row {
+    width: 100%;
+    height: 40px;
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+
+    .slidebar-row.active {
+        background: #00577b !important;
+    }
+
+.slidebar-icon {
+    background: url('../images/slibarmenu.png') no-repeat;
+    width: 22px;
+    height: 38px;
+    position: absolute;
+    top: 2px;
+    left: 8px;
+}
+
+.slidebar-row-name {
+    position: absolute;
+    bottom: 3px;
+    left: 40px;
+    height: 26px;
+    font-weight: 300;
+}
+/*Set vị trí ảnh icon slideBar*/
+.icon-home {
+    background-position: 0 6px;
+}
+
+.icon-report {
+    background-position: 0 -273px;
+}
+
+.icon-deliveryledger {
+    background: url('../images/ic_sogiaohang.png') no-repeat 4px 9px !important;
+}
+
+.icon-purchares {
+    background-position: 0 -33px;
+}
+
+.icon-fund {
+    background-position: 0 -115px;
+}
+
+.icon-receipt {
+    background-position: -2px -154px;
+}
+
+.icon-promotion {
+    background-position: 0 -193px;
+}
+
+.icon-dictionary {
+    background-position: 0 -233px;
+}
+
+.icon-setting {
+    background-position: 0 -313px;
+}
+
+.icon-help {
+    background-position: 0 -383px;
+}
+
+.icon-omnichannel {
+    background: url(../images/ic_ocm_logo.png) no-repeat 4px 9px !important;
+}
+
+.icon-fiveshop {
+    background: url(../images/icon_5shop_white_24_1.png) no-repeat 0 5px !important;
+}
+
+.icon-goods {
+    background: url(https://demoquanao.mshopkeeper.vn/g1/resources/images/slibarmenu.png?v=1) no-repeat 0 -348px !important;
+}
+
+.icon-inventoryitem {
+    background-position: 0 -350px;
+}
+
+.slidebar-bottom {
+    border-top: 1px solid #004765 !important;
+}
+
+/*#endregion */
+
+/*#region main content */
+.main-content {
+    height: 100%;
+    background: #e5e6eb;
+    position: relative;
+}
+
+    .main-content .box-dictionary {
+        position: absolute;
+        top: 8px;
+        bottom: 8px;
+        left: 8px;
+        right: 8px;
+        background: #fff;
+    }
+/*#endregion*/
+
+/*#region toolbar */
+.box-dictionary .box-toolbar {
+    background: #026b97;
+    height: 36px;
+    width: 100%;
+}
+
+.btn-toolbar {
+    padding: 0 14px;
+    border-color: #1882ae !important;
+    line-height: 37px;
+    color: #fff;
+    /*font-family: 'Roboto';*/
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.btn-disable {
+    opacity: 0.5;
+}
+
+.box-toolbar .btn-toolbar:hover {
+    background: #0088c2;
+}
+
+.icon-toolbar {
+    width: 16px;
+    height: 16px;
+    margin: 10px 8px 0 0;
+}
+
+.btn-add .icon-toolbar {
+    background: url('../images/common-icon.png') no-repeat -1px -127px;
+}
+
+.btn-duplicate .icon-toolbar {
+    background: url(../images/common-icon.png) no-repeat -976px -127px;
+}
+
+
+.btn-edit .icon-toolbar {
+    background: url(../images/common-icon.png) no-repeat -77px -203px;
+}
+
+.icon-toolbar {
+    background: url(../images/common-icon.png) no-repeat -1076px -127px;
+}
+
+
+.btn-print .icon-toolbar {
+    background: url(../images/common-icon.png) no-repeat -27px -52px;
+}
+
+.btn-reload .icon-toolbar {
+    background: url(../images/common-icon.png) no-repeat -876px -127px;
+}
+
+.btn-utilities .icon-toolbar {
+    background: url(https://demoquanao.mshopkeeper.vn/g1/resources/images/iconUtil.png) no-repeat;
+}
+
+.btn-input .icon-toolbar {
+    background: url(../images/common-icon.png) no-repeat -177px -127px;
+}
+
+.btn-output .icon-toolbar {
+    background: url(../images/common-icon.png) no-repeat -127px -127px;
+}
+
+.btn-more.btn-hide .icon-toolbar {
+    background: url(../images/common-icon.png) no-repeat -1300px -152px;
+}
+
+.btn-more.btn-hide, .btn-less.btn-hide {
+    color: #80b5cb;
+}
+
+.btn-more .icon-toolbar {
+    background: url(../images/common-icon.png) no-repeat -1300px -127px;
+}
+
+/*Nút không được sử dụng icon sẽ mờ đi*/
+.btn-less.btn-hide .icon-toolbar {
+    background: url(../images/common-icon.png) no-repeat -1350px -152px;
+}
+
+.btn-less .icon-toolbar {
+    background: url(../images/common-icon.png) no-repeat -1350px -127px;
+}
+/*#endregion */
+
+/*#region Style lại nút checkbox*/
+
+.lb-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .lb-checkbox input[type='checkbox'] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .lb-checkbox .checkmark {
+        position: absolute;
+        left: calc(50% - 8px);
+        height: 14px;
+        width: 14px;
+        background-color: #fff;
+        border: 2px solid #868686;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+    }
+
+.table-thead-column .lb-checkbox .checkmark {
+    top: 35px;
+}
+
+.lb-checkbox input:checked ~ .checkmark {
+    background-color: #026b97;
+    height: 14px;
+    width: 14px;
+    border: 1px solid #026b97;
+    left: calc(50% - 7px);
+}
+
+    .lb-checkbox input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 4px;
+    top: -1px;
+    width: 5px;
+    height: 11px;
+    border: solid #fff;
+    border-width: 0 1.5px 1.5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 1px;
+}
+/*#endregion*/
+
+/*#region Style radiobox*/
+.checkmark-radio:after {
+    top: 2px;
+    left: 1.8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #026b97;
+}
+.container-radiobox {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /*Ẩn radio mặc định*/
+    .container-radiobox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+        /*Thay đổi border thi checked*/
+        .container-radiobox input:checked ~ .checkmark-radio {
+            background-color: white;
+            border: 2px solid #026b97 !important;
+        }
+
+/*Hiển thị nút tròn khi được check*/
+.container-radiobox input:checked ~ .checkmark-radio:after {
+    display: block;
+}
+
+/*Styled nút tròn*/
+.container-radiobox .checkmark-radio:after {
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #026b97;
+}
+/*#region table employees */
+.customer-group .customers {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.tb-customer-group {
+    width: 100%;
+    overflow: scroll;
+}
+
+    .tb-customer-group tr th, .tb-customer-group tr td {
+        padding: 7px 10px;
+        border: 1px solid #d0d0d0;
+        background: #f0f0f0;
+    }
+
+    .tb-customer-group tr th {
+        text-align: center;
+    }
+
+    .tb-customer-group tbody tr td:first-child {
+        padding-left: 30px;
+    }
+/*#endregion */
+/*#endregion */
+
+/*#region Style datetime picker*/
+
+.ui-icon ui-icon-circle-triangle-w {
+    background: url('../images/common-icon.png') no-repeat -718px -140px !important;
+}
+
+.ui-icon ui-icon-circle-triangle-e {
+    background: url('../images/common-icon.png') no-repeat -775px -140px !important;
+}
+
+.ui-datepicker {
+    width: 308px;
+}
+
+    .ui-datepicker .ui-datepicker-header {
+        background: #247ba0 !important;
+        height: 44px;
+        line-height: 44px;
+        color: #f0f0f0;
+    }
+
+    .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+        width: 30px !important;
+        height: 100% !important;
+        top: 0 !important;
+    }
+
+        .ui-datepicker .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-next:hover {
+            background: #247ba0 !important;
+        }
+/*#endregion*/

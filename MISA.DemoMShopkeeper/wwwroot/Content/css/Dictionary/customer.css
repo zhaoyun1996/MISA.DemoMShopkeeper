@@ -1,0 +1,153 @@
+﻿/*#region Bảng khách hàng*/
+.customers {
+    height: calc(100% - 36px);
+    position: relative;
+}
+
+.customers-table {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: calc(100% - 55px);
+    border: 1px solid #d0d0d0;
+}
+/*Header của bảng dữ liêu*/
+.customer-table-thead {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    z-index: 50;
+    display: flex;
+    background: #f0f0f0;
+    overflow: hidden;
+}
+/*cột có nút check*/
+.customer-table-column-check {
+    width: 40px;
+    min-width: 40px;
+    line-height: 64px;
+    text-align: center;
+    padding: 0 !important;
+}
+/*Đặt kích thước cho các cột dữ liệu*/
+.customer-table-column-customerCode {
+    width: 120px;
+    min-width: 120px;
+}
+
+.customer-table-column-customerName {
+    min-width: 250px;
+    width: calc(100% - 940px);
+    /*879*/
+}
+
+.customer-table-column-customerPhone,
+.customer-table-column-customerStatus {
+    min-width: 150px;
+    width: 150px;
+}
+
+.customer-table-column-customerBirthday {
+    min-width: 160px;
+    width: 160px;
+}
+
+.customer-table-column-customerGroup {
+    min-width: 150px;
+    width: 150px;
+}
+
+.customer-table-column-Note {
+    min-width: 180px;
+    width: 180px;
+}
+
+.column-scroll {
+    min-width: 17px;
+    width: 17px;
+    display: none;
+}
+/*Thân bảng (danh sách dữ liệu)*/
+.customer-table-tbody {
+    top: 64px;
+    bottom: 0;
+}
+
+    .customer-table-tbody table {
+        border: 1px solid #e1e1e1;
+    }
+
+/*#endregion*/
+
+/*#region Style toolbar khi click chuột phải vào bảng dữ liệu*/
+.toolbar-right-click {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    z-index: 200;
+    width: 120px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    display: none;
+    box-shadow: #303030 1px 1px 14px 1px;
+}
+
+.toolbar-row {
+    padding: 4px;
+    line-height: 28px;
+    color: #212121;
+    cursor: pointer;
+}
+
+    .toolbar-row:hover {
+        background: #247ba0;
+        color: #fff;
+    }
+
+.icon-toolbar-row {
+    background: url('../../images/common-icon.png') no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+    .icon-toolbar-row.icon-add {
+        background-position: -148px -173px;
+    }
+
+    .icon-toolbar-row.icon-duplicate {
+        background-position: -46px -173px;
+    }
+
+    .icon-toolbar-row.icon-edit {
+        background-position: -73px -173px;
+    }
+
+    .icon-toolbar-row.icon-delete {
+        background-position: -97px -173px;
+    }
+
+    .icon-toolbar-row.icon-reload {
+        background-position: -122px -173px;
+    }
+
+.toolbar-row:hover .icon-toolbar-row {
+    background-position-y: -197px !important;
+}
+
+.content-toolbar-row {
+    padding-left: 8px;
+}
+
+.toolbar-row.btn-disable {
+    opacity: 0.5;
+}
+
+    .toolbar-row.btn-disable:hover {
+        background: #7fb5c4;
+    }
+
+/*#endregion*/

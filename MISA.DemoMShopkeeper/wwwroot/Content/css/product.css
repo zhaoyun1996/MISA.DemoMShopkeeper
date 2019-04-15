@@ -1,0 +1,1232 @@
+﻿/*Ph?n riêng hi?n th? thông tin danh m?c hàng hóa*/
+.product-table {
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    height: calc(100% - 90px);
+    /*border: 0px solid #d0d0d0;*/
+    overflow-x: scroll;
+}
+/*Các tru?ng thông tin c?a s?n ph?m*/
+.product-table-thead {
+    height: 65px;
+    min-width: 1400px;
+    z-index: 100;
+    display: flex;
+}
+/*B?ng hi?n th? thông tin s?n phj?m*/
+.product-table-infor {
+    height: 38px;
+    z-index: 100;
+    display: flex;
+}
+
+.box-filter .sub-filter-menu {
+    position: absolute;
+    top: 36px;
+    left: 2px;
+    z-index: 100;
+    border: 1px solid #c3c3c3;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 20px -5px #333;
+    display: none;
+}
+
+.box-filter .sub-filter-row {
+    display: flex;
+    padding: 1px 10px 1px 20px;
+    line-height: 31px;
+    color: #212121;
+    cursor: pointer;
+    white-space: nowrap;
+}
+/*Thông tin t?ng s?n ph?m*/
+.product-infor {
+    margin-top: -1px;
+    /*background-color:yellow;*/
+    border: 1px solid #e1e1e1;
+}
+
+    .product-infor:hover {
+        background-color: #e9e9e9;
+    }
+/*C?t hi?n th? mã s?n ph?m*/
+.product-table-column-productCode {
+    width: 150px;
+    min-width: 150px;
+}
+
+.box-filter .btn-filter {
+    cursor: pointer;
+}
+/*C?t hi?n th? tên s?n ph?m*/
+.product-table-column-productName {
+    width: calc(100% - 1110px);
+    min-width: 300px;
+}
+
+.product-table-column-productName-list {
+    width: calc(100% - 1086px);
+    min-width: 300px;
+}
+/*C?t hi?n th? don v? s?n ph?m*/
+.product-table-column-productUnit {
+    min-width: 135px;
+    width: 135px;
+}
+/*C?t hi?n th? giá s?n ph?m*/
+.product-table-column-productPrice {
+    /*width: 130px;*/
+    min-width: 137px;
+}
+/*C?t hi?n th? tên s?n ph?m*/
+.product-table-column-productStatus {
+    min-width: 137px;
+    width: 137px;
+}
+/*C?t hi?n th? Nhóm hàng hóa*/
+.product-table-column-productGroup {
+    min-width: 180px;
+}
+/*C?t hi?n th? thông tin*/
+.product-table-column-outputProduct {
+    min-width: 190px;
+    width: 196px;
+}
+
+.product_infor table {
+    min-width: 100%;
+}
+
+    .product_infor table tr td {
+        border: 1px solid #d0d0d0;
+    }
+
+        .product_infor table tr td span {
+            border: 1px solid #d0d0d0;
+        }
+
+        .product_infor table tr td span {
+            margin-top: 1px;
+            margin-left: 1px;
+            position: absolute;
+            min-width: 34px;
+            text-align: center;
+            line-height: 34px;
+        }
+
+        .product_infor table tr td .input-code-product {
+            margin-left: 36px;
+            height: 38px;
+            min-width: 110px;
+        }
+
+        .product_infor table tr td .input-name-product {
+            margin-left: 36px;
+            height: 38px;
+            min-width: 639px;
+        }
+
+        .product_infor table tr td .input-group-product {
+            margin-left: 36px;
+            height: 38px;
+            min-width: 639px;
+        }
+
+.product-table-list {
+    overflow-y: scroll;
+    height: calc(100% - 65px);
+    min-width: 1400px;
+    overflow-x: hidden;
+}
+
+    .product-table-list table {
+        border: 1px solid #e9e9e9;
+    }
+
+        .product-table-list table tr td {
+            border-color: #e9e9e9;
+            border-style: solid;
+        }
+
+            .product-table-list table tr td div {
+                margin: 11px;
+            }
+
+
+/*.product-table-list table tr td div a:visited{
+    text-decoration:none;
+    background-color:red
+}*/
+
+.icon-Product {
+    background: url(https://demoquanao.mshopkeeper.vn/g1/resources/images/slibarmenu.png?v=1) no-repeat 0 -348px !important;
+}
+
+.typeProduct-table-column-Type {
+    min-width: 120px;
+    width: 120px;
+}
+
+.output-infor {
+    margin: 10px;
+}
+
+.output-infor-name {
+    margin: 10px;
+    color: #007abc;
+}
+
+    .output-infor-name:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+.product-footer {
+    border: 1px solid #e9e9e9;
+    background-color: white;
+    height: 54px;
+    width: 100%;
+}
+
+.icon-first-page {
+    border: 1px solid #026b97;
+    border-radius: 4px;
+    margin: 12px;
+    background: url(../images/common-icon.png) no-repeat -649px -124px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.product-footer-infor {
+    display: flex;
+}
+
+.btn-toolbar {
+    position: relative;
+}
+
+.icon-previous-page {
+    border: 1px solid #026b97;
+    border-radius: 4px;
+    margin-top: 12px;
+    margin-left: -10px;
+    background: url(../images/common-icon.png) no-repeat -700px -124px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.icon-next-page {
+    border: 1px solid #026b97;
+    border-radius: 4px;
+    margin-top: 12px;
+    margin-left: 2px;
+    background: url(../images/common-icon.png) no-repeat -749px -124px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.icon-last-page {
+    border: 1px solid #026b97;
+    border-radius: 4px;
+    margin-top: 12px;
+    margin-left: 2px;
+    background: url(../images/common-icon.png) no-repeat -798px -124px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.icon-refresh-page {
+    border: 1px solid #026b97;
+    border-radius: 4px;
+    margin-top: 12px;
+    margin-left: 2px;
+    background: url(../images/common-icon.png) no-repeat -849px -124px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.addProduct {
+    left: 0px;
+    top: 36px;
+    color: black;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    display: none;
+    border: 1px solid #c5c5c5;
+}
+
+.Export {
+    width: 130px;
+    left: 0px;
+    top: 36px;
+    color: black;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    display: none;
+    border: 1px solid #c5c5c5;
+}
+
+.Utilities {
+    width: 165px;
+    left: 0px;
+    top: 36px;
+    color: black;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    display: none;
+    border: 1px solid #c5c5c5;
+    box-shadow: 1px #f0f0f0;
+}
+
+.addProduct-pick {
+    padding: 3px;
+}
+
+    .addProduct-pick:hover {
+        background-color: #026b97;
+        color: white;
+    }
+
+.Export-pick {
+    padding: 3px;
+}
+
+    .Export-pick:hover {
+        background-color: #026b97;
+        color: white;
+    }
+
+.Utilities-pick {
+    padding: 3px;
+    display: flex;
+}
+
+    .Utilities-pick:hover {
+        font-weight: bold;
+        color: #026d9b;
+    }
+
+.icon-toolbar-product {
+    width: 20px;
+    height: 20px;
+    margin: 7px -11px 0px 4px;
+}
+
+.icon-toolbar-export {
+    width: 20px;
+    height: 20px;
+    margin: 7px -11px 0px 4px;
+}
+
+.icon-toolbar-utilities {
+    width: 20px;
+    height: 20px;
+    margin: 7px -11px 0px 4px;
+}
+
+.import-product {
+    display: none;
+    background-color: rgba(0,0,0,.6) !important;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+}
+
+.import-product-form {
+    position: relative;
+    width: 920px;
+    height: 600px;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.import-step1 {
+    display: block;
+}
+
+.import-step2 {
+    display: none;
+}
+
+.import-step3 {
+    display: none;
+}
+
+.import-product-header {
+    position: relative;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    background-color: #f0f0f0;
+    height: 41px;
+    width: 100%;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.import-product-header-content {
+    display: flex;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.icon-full-size-import {
+    position: absolute;
+    right: 30px;
+    height: 16px;
+    width: 16px;
+    /* margin-left:685px; */
+    /* margin-right: 50px; */
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/Maximize.png) no-repeat 0px 6px;
+}
+
+    .icon-full-size-import:hover {
+        cursor: pointer;
+    }
+
+.icon-full-size-pick {
+    right: 4%;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/Maximize.png) no-repeat 0px 6px;
+}
+
+    .icon-full-size-pick:hover{
+        cursor:pointer;
+    }
+
+    .icon-cancel-import {
+        position: absolute;
+        /* margin-right: 18px; */
+        right: 10px;
+        /* margin-left:5px; */
+        margin-top: 2px;
+        height: 16px;
+        width: 16px;
+        background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -1127px -127px;
+    }
+
+    .icon-cancel-import:hover {
+        cursor: pointer;
+    }
+
+.icon-cancel-pick {
+    position: absolute;
+    /* margin-right: 18px; */
+    right: 2%;
+    /* margin-left:5px; */
+    margin-top: 2px;
+    height: 16px;
+    width: 16px;
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -1127px -127px;
+}
+
+    .icon-cancel-pick:hover {
+        cursor: pointer;
+    }
+
+.import-product-main-content {
+    /* position: absolute; */
+    height: 422px;
+    width: 100%;
+    /* border-bottom: 1px solid #d0d0d0; */
+}
+
+.import-product-main-header-content {
+    display: flex;
+    padding: 7px;
+}
+
+.import-product-main-header {
+    background-color: #ebebeb;
+    width: 100%;
+    height: 55px;
+}
+
+.import-product-main {
+    height: calc(100% - 92px);
+    border: 1px solid #d0d0d0;
+}
+
+.import-first {
+    display: flex;
+    margin-left: 18px;
+    width: 30%;
+    height: 40px;
+    background-color: #026b97;
+    border-radius: 5px;
+}
+
+.import-order-pick {
+    font-size: 35px;
+    color: #89afc4;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: -5px;
+}
+
+.import-order {
+    font-size: 35px;
+    color: #ebebeb;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: -5px;
+}
+
+.import-order-content-pick {
+    color: white;
+    font-size: 13px;
+    font-family: 'Roboto',Tahoma,sans-serif !important;
+    margin-top: 10px;
+    margin-left: 20%;
+}
+
+.line-order {
+    margin-top: 18px;
+    width: 3%;
+    height: 3px;
+    background-color: #e0e0e0;
+}
+
+.line-order-pick {
+    margin-top: 18px;
+    width: 3%;
+    height: 3px;
+    background-color: #026b97;
+}
+
+.import-second {
+    border: 1px solid #d0d0d0;
+    display: flex;
+    width: 30%;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.logo-complete {
+    background-image: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/icon-tick-fill-white-16.png);
+    width: 16px;
+    height: 16px;
+    margin-top: 11px;
+    margin-left: 24%;
+    display: none;
+}
+
+.import-third {
+    border: 1px solid #d0d0d0;
+    display: flex;
+    width: 30%;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.import-order-content {
+    color: black;
+    font-size: 13px;
+    font-family: 'Roboto',Tahoma,sans-serif !important;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.import-type {
+    display: flex;
+    margin: 20px;
+}
+
+.import-case {
+    display: flex;
+    margin: 20px;
+}
+
+.import-file {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    margin: 20px;
+    /* position: relative; */
+}
+
+.import-pick-type {
+    margin-left: 70px;
+}
+
+.import-pick-case {
+    margin-left: 30px;
+}
+
+.import-pick-file {
+    position: absolute;
+    margin-left: 134px;
+    height: 39%;
+    width: 82%;
+    border: 1px dashed #d6d6d6;
+}
+
+.import-product-help {
+    margin-left: 10px;
+    margin-top: 16px;
+    width: 100px;
+    height: 35px;
+    display: flex;
+}
+
+    .import-product-help:hover {
+        cursor: pointer;
+        background-color: #f0f0f0;
+    }
+
+.icon-groupProduct-help {
+    margin-left: 12px;
+    margin-top: 10px;
+    background: url(https://demoquanao.mshopkeeper.vn/g1/resources/images/help.png);
+    height: 13px;
+    width: 13px;
+}
+
+.import-product-footer-content {
+    position: relative;
+    margin-top: -10px;
+    display: flex;
+}
+
+.icon-btn-cancel {
+    float: left;
+    background: url('../images/common-icon.png') no-repeat -245px -119px;
+    height: 33px;
+    width: 30px;
+}
+
+.cancel {
+    height: 35px;
+    width: 90px;
+    background-color: white;
+    margin-left: 10px;
+    border-radius: 4px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 16px;
+    position: absolute;
+    right: 20px;
+}
+
+    .cancel:hover {
+        border: 1px solid #026b97;
+    }
+
+.cancel-text {
+    margin-top: 8px;
+    font-weight: 600;
+    margin-left: 5px;
+    font-size: 13px;
+    color: #026b97;
+}
+
+.icon-btn-back {
+    float: left;
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -444px -119px;
+    height: 33px;
+    width: 30px;
+}
+
+.import-product-header:hover {
+    cursor: all-scroll;
+}
+
+.pick-product-form-header {
+    border-radius:3px 3px 0 0;
+    position: relative;
+    width: 100%;
+    height: 41px;
+    background-color: #f0f0f0;
+}
+
+.pick-product-form-header:hover{
+    cursor:all-scroll;
+}
+
+.pick-product {
+    display:none;
+    background-color: rgba(0,0,0,.6) !important;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+}
+
+.pick-product-form {
+    width: 1000px;
+    height: 540px;
+    background-color: white;
+    right: auto;
+    margin-left: 20%;
+    margin-top: 5%;
+    border-radius:3px;
+}
+
+.back {
+    opacity: 0;
+    position: absolute;
+    right: 232px;
+    height: 35px;
+    width: 90px;
+    background-color: white;
+    margin-left: 500px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 16px;
+    border: 1px solid #026b97;
+}
+
+.back-text {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #026b97;
+}
+
+.icon-btn-continue {
+    float: left;
+    background: url(../images/common-icon.png) no-repeat -417px -118px;
+    height: 33px;
+    width: 30px;
+}
+
+.continue {
+    position: absolute;
+    height: 35px;
+    width: 100px;
+    background-color: #026b97;
+    margin-left: 10px;
+    border-radius: 4px;
+    display: flex;
+    margin-top: 16px;
+    opacity: 0.5;
+    cursor: pointer;
+    right: 120px;
+}
+
+.continue-text {
+    margin-top: 8px;
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 13px;
+    color: white;
+}
+
+.icon-file {
+    width: 32px;
+    height: 32px;
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/icon-file-gray-32.png) no-repeat 50% 100%;
+}
+
+.import-icon-file {
+    margin: auto;
+    padding: 50px;
+}
+
+.text-upload-file {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #237b9f;
+}
+
+    .text-upload-file:hover {
+        cursor: pointer;
+    }
+
+.import-step2-index {
+    display: flex;
+    margin: 20px;
+}
+
+.import-step2-content {
+    position: absolute;
+    width: 96%;
+    height: 60%;
+    border: 1px solid #e1e1e1;
+    margin-left: 18px;
+    margin-top: -7px;
+    overflow-x: scroll;
+}
+
+.import-step2-content-infor {
+    display: flex;
+    position: absolute;
+}
+
+.import-infor {
+    width: 142px;
+    height: 32px;
+    background-color: #f0f0f0;
+    border: 1px solid #e1e1e1;
+    font-weight: bold;
+    text-align: center;
+    line-height: 29px;
+    font-size: 13px;
+}
+
+.import-step3-content {
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/Import-Success.png) no-repeat;
+    width: 187px;
+    height: 142px;
+    margin: auto;
+}
+
+.complete {
+    position: absolute;
+    height: 35px;
+    width: 120px;
+    background-color: #026b97;
+    border-radius: 4px;
+    display: flex;
+    margin-top: 16px;
+    cursor: pointer;
+    right: 20px;
+}
+
+.classnone {
+    display: none !important;
+}
+
+.complete-text {
+    margin-top: 8px;
+    font-weight: 600;
+    margin-left: 10px;
+    font-size: 13px;
+    color: white;
+}
+
+.icon-btn-complete {
+    float: left;
+    background: url(../images/common-icon.png) no-repeat -366px -119px;
+    height: 33px;
+    width: 30px;
+}
+
+.pick-product-header-content {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #dfdfdf
+}
+
+.pick-product-form-main-header {
+    display: flex;
+    position: relative;
+    padding: 20px;
+}
+
+    .pick-product-form-main-header select {
+        height: 33px;
+        width: 150px;
+        border-radius: 3px;
+        margin-left: 30px;
+    }
+
+        /*.pick-product-form-main-header option{
+    background-color:red;
+    text-indent: 5px;
+    padding:10px !important;
+}*/
+        .pick-product-form-main-header select option {
+            margin-bottom: 5px;
+        }
+
+#pick-group-type {
+    height: 33px;
+    width: 160px;
+    border-radius: 3px;
+    background-color: white;
+    padding: 10px;
+}
+
+.btn-search-product-pick {
+    margin-left: 10px;
+    border: 1px solid #026b97;
+    border-radius: 3px;
+    width: 120px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+    color: #026b97;
+    font-weight: bold;
+    font-family: Tahoma;
+}
+
+    .btn-search-product-pick:hover {
+        cursor: pointer;
+    }
+
+.count-product {
+    margin-left: 20px;
+    color: #026b97;
+}
+
+    .count-product:hover {
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+.icon-arrow-down-pick {
+    width: 24px;
+    text-align: center;
+    line-height: 30px;
+    margin-left: -24px;
+}
+
+    .icon-arrow-down-pick:hover {
+        cursor: pointer;
+    }
+
+.list-type-product {
+    z-index: 100;
+    overflow-y: scroll;
+    top: 70%;
+    border: 1px solid;
+    display: none;
+    position: absolute;
+    height: 298px;
+    width: 161px;
+    background-color: white;
+}
+
+.option-boss {
+    margin-left: 10px !important;
+}
+
+.list-type-product div div {
+    margin-left: 20px;
+}
+
+.list-type-product div:hover {
+    color: white;
+    background-color: #026b97;
+}
+
+.option-employ {
+    margin-left: 30px !important;
+}
+
+.table-group-pick {
+    border: 1px solid #e1e1e1;
+    height: 60%;
+    width: 95%;
+    margin: 20px;
+}
+
+.pick-product-form-main {
+    height: 81%;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.table-group-pick-header {
+    position: relative;
+    background-color: #f0f0f0;
+    display: flex;
+    border-bottom: 1px solid #e1e1e1;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.table-group-pick-header-code {
+    background-color: #f0f0f0;
+    height: 36px;
+    min-width: 220px;
+    line-height: 33px;
+    font-weight: bold;
+    border-right: 1px solid #e1e1e1;
+}
+
+.table-group-pick-header-name {
+    /* max-width: 1500px; */
+    /* min-width: 200px; */
+    background-color: #f0f0f0;
+    text-align: center;
+    height: 36px;
+    width: calc(100% - 739px);
+    line-height: 33px;
+    font-weight: bold;
+    border-right: 1px solid #e1e1e1;
+}
+
+.table-group-pick-header-group {
+    background-color: #f0f0f0;
+    text-align: center;
+    height: 36px;
+    min-width: 220px;
+    line-height: 33px;
+    font-weight: bold;
+    border-right: 1px solid #e1e1e1;
+}
+
+.table-group-pick-header-unit {
+    background-color: #f0f0f0;
+    text-align: center;
+    height: 36px;
+    min-width: 100px;
+    line-height: 33px;
+    font-weight: bold;
+    border-right: 1px solid #e1e1e1;
+}
+
+.table-group-pick-header-priceTB {
+    background-color: #f0f0f0;
+    text-align: center;
+    height: 36px;
+    min-width: 199px;
+    line-height: 33px;
+    font-weight: bold;
+    border-right: 1px solid #e1e1e1;
+}
+
+.table-group-pick-content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 88%;
+    cursor:pointer;
+    /* overflow: scroll; */
+}
+
+.table-group-pick-content div:hover{
+    background-color:#bdf9fd
+}
+
+.table-group-pick-content-hover {
+    background-color: #5fa2dd;
+}
+
+.table-group-pick-content-code {
+    display: flex;
+    text-align: center;
+    height: 36px;
+    min-width: 220px !important;
+    line-height: 33px;
+    max-width: 220px !important;
+    font-weight: bold;
+    border-right: 1px solid #e1e1e1;
+}
+
+.table-group-pick-content-name {
+    /* max-width: 1500px; */
+    /* min-width: 200px; */
+    padding-left: 10px;
+    height: 36px;
+    width: calc(100% - 739px);
+    line-height: 33px;
+    font-weight: bold;
+    border-right: 1px solid #e1e1e1;
+}
+
+.table-group-pick-content-group {
+    padding-left: 10px;
+    height: 36px;
+    min-width: 220px;
+    line-height: 33px;
+    font-weight: bold;
+    border-right: 1px solid #e1e1e1;
+}
+
+.table-group-pick-content-unit {
+    padding-left: 10px;
+    height: 36px;
+    min-width: 100px;
+    line-height: 33px;
+    font-weight: bold;
+    border-right: 1px solid #e1e1e1;
+}
+
+.table-group-pick-content-priceTB {
+    padding-left: 10px;
+    height: 36px;
+    min-width: 199px;
+    line-height: 33px;
+    font-weight: bold;
+    border-right: 1px solid #e1e1e1;
+}
+
+.product-right-mouse {
+    display: none;
+    width: 160px;
+    height: 201px;
+    position: fixed;
+    background-color: white
+}
+
+    .product-right-mouse div {
+        height: 32px;
+    }
+
+.add-product {
+    display: flex;
+    line-height: 31px;
+}
+
+.add-product-combo {
+    display: flex;
+    line-height: 31px;
+}
+
+.add-product-icon {
+    width: 24px;
+    height: 24px;
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -148px -170px;
+}
+
+.add-product-icon-hover {
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat 2px -120px !important;
+}
+
+.right-mouse-hover {
+    background-color: #026b97;
+    color: white;
+    cursor: pointer
+}
+
+.copy-product {
+    display: flex;
+    line-height: 32px;
+    margin-top: -9px;
+}
+
+.edit-product {
+    display: flex;
+    line-height: 32px;
+}
+
+.delete-product {
+    display: flex;
+    line-height: 32px;
+}
+
+.load-product {
+    display: flex;
+    line-height: 32px;
+}
+
+#copy-product-icon {
+    width: 24px;
+    height: 24px;
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -46px -169px;
+}
+
+#load-product-icon {
+    width: 24px;
+    height: 24px;
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -123px -169px;
+}
+
+#delete-product-icon {
+    width: 24px;
+    height: 24px;
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -97px -171px;
+}
+
+#edit-product-icon {
+    width: 24px;
+    height: 24px;
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -72px -171px;
+}
+
+.icon-copy-product-hover {
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -46px -195px !important;
+}
+
+.icon-edit-product-hover {
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -72px -195px !important;
+}
+
+.icon-delete-product-hover {
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -97px -196px !important;
+}
+
+.icon-load-product-hover {
+    background: url(https://demoquanao.mshopkeeper.vn/g2/resources/images/common-icon.png) no-repeat -123px -194px !important;
+}
+
+.paging {
+    height: 40px;
+    display: flex;
+    margin-left: 7px;
+    /* margin-top: 2px; */
+    margin-bottom: 0px;
+}
+
+.pick-product-form-footer {
+    height: 49px;
+    width: 100%;   
+}
+
+.button-export-pick {
+    display: flex;
+    position: absolute;
+    right: 115px;
+    height: 35px;
+    width: 120px;
+    background-color: #026b97;
+    border-radius: 3px;
+    line-height: 31px;
+    color: white;
+}
+
+    .button-export-pick:hover {
+        background-color: #0088c2;
+        cursor:pointer
+    }
+
+.btn-cancel-pick {    
+    position: absolute;
+    right: 15px;
+    height: 35px;
+    width: 90px;
+    border-radius: 3px;
+    display: flex;
+    color: #026b97;
+    font-family:Tahoma;
+    font-size:13px;
+    font-weight:bold;
+    line-height:30px;
+}
+
+    .btn-cancel-pick:hover {
+        border: 1px solid #026b97;
+        cursor:pointer;
+    }
+
+.icon-export-pick {
+    margin-left: 20px;
+    margin-top: 7px;
+    height: 16px;
+    width: 16px;
+    background: url(../images/common-icon.png) no-repeat -127px -127px;
+}
+
+.icon-btn-cancel-pick {
+    margin-left: 10px;
+    margin-top: 7px;
+    height: 16px;
+    width: 16px;
+    background: url(../images/common-icon.png) no-repeat -252px -127px;
+    
+}
+
+.table-group-pick-header-code input{
+    margin-left:39px;
+}

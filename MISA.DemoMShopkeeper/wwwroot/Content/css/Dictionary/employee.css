@@ -1,0 +1,74 @@
+﻿$(document).ready(function () {
+    $(".resizable").resizable({
+        handles: 'e',
+    });
+    $('#add-employee').hide();
+    $('#btn-add-employee').click(function () {
+        $('#add-employee').show();
+
+    })
+
+    $('#icon-close-form-add-employee').click(function () {
+        $('#add-employee').hide();
+    })
+
+    $('#btn-cancel-add-form-add-employees').click(function () {
+        $('#add-employee').hide();
+    })
+
+    $(function () {
+        $("#form-add-employee").draggable({ containment: "#add-employee", scroll: false, cancel: ".content-add-employee" });
+    })
+
+    //Thêm thông tin liên lạc của nhân viên
+    $("#content-form-add-contact-information-employee").hide();
+    $("#form-add-contact-information-employee").hide();
+    $('#btn-information-contact-employee').click(function () {
+        $("#content-form-add-contact-information-employee").show();
+        $("#content-form-add-profile-information-employee").hide();
+        $("#content-form-add-time-access-information-employee").hide();
+        $('#content-form-add-basic-information-employee').hide();
+        $('#btn-information-contact-employee').addClass('btn-target');
+        $('#btn-information-profile-employee').addClass('btn-nottarget');
+        $('#btn-information-time-access-employee').addClass('btn-nottarget');
+        $('#btn-information-basic-employee').addClass('btn-nottarget');
+    })
+
+    //THêm thông tin chung nhân viên
+    $('#btn-information-basic-employee').click(function () {
+        $("#content-form-add-basic-information-employee").show();
+        $('#content-form-add-contact-information-employee').hide();
+        $("#content-form-add-profile-information-employee").hide();
+        $("#content-form-add-time-access-information-employee").hide();
+        $('#btn-information-basic-employee').addClass('btn-target');
+        $('#btn-information-profile-employee').addClass('btn-nottarget');
+        $('#btn-information-time-access-employee').addClass('btn-nottarget');
+        $('#btn-information-contact-employee').addClass('btn-nottarget');
+    })
+
+    //Thêm thông tin hồ sơ nhân viên
+    $('#btn-information-profile-employee').click(function () {
+        $("#content-form-add-profile-information-employee").show();
+        $('#content-form-add-basic-information-employee').hide();
+        $("#content-form-add-time-access-information-employee").hide();
+        $('#content-form-add-contact-information-employee').hide();
+        $('#btn-information-profile-employee').addClass('btn-target');
+        $('.information-basic-form-add-employee').addClass('btn-nottarget');
+        $('#btn-information-contact-employee').addClass('btn-nottarget');
+    })
+
+    //Thêm thời gian truy cập nhân viên
+    $('#btn-information-time-access-employee').click(function () {
+        $("#content-form-add-time-access-information-employee").show();
+        $("#content-form-add-profile-information-employee").hide();
+        $('#content-form-add-basic-information-employee').hide();
+        $('#content-form-add-contact-information-employee').hide();
+        $('#btn-information-time-access-employee').addClass('btn-target');
+        $('.information-basic-form-add-employee').addClass('btn-nottarget');
+        $('#btn-information-profile-employee').addClass('btn-nottarget');
+        $('#btn-information-contact-employee').addClass('btn-nottarget');
+    })
+
+    $(".popup-option").hide();
+
+});

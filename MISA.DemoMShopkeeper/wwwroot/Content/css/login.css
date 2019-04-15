@@ -1,0 +1,208 @@
+﻿/*form login*/
+.header-login {
+    height: 66px;
+    width: 100%;
+    background: #026b97;
+    position: relative;
+}
+
+.logo-login {
+    background: url('../images/mshopkeeper_logo.png') no-repeat;
+    background-position: 20px center;
+    line-height: 66px;
+    height: 66px;
+}
+
+.footer-login-over {
+}
+
+.manual-footer-login-over {
+    display: flex;
+}
+
+.switchboard-logo {
+    background: url('../images/Support.png') no-repeat left center;
+    height: 25px;
+    width: 25px;
+}
+
+.mail-logo {
+    background: url('../images/mail.png') no-repeat left center;
+    height: 25px;
+    width: 25px;
+}
+
+.manual-logo {
+    background: url('../images/ic_video_library.png') no-repeat left center;
+    height: 25px;
+    width: 25px;
+}
+
+.footer-login-under {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    background-color: #026b97;
+    height: 48px;
+}
+
+.text-footer-login-under {
+    text-align: center;
+    color: #fff;
+    background-color: #026b97;
+    padding: 15px 0;
+}
+
+    .text-footer-login-under a {
+        text-decoration: none;
+        color: white;
+    }
+
+.footer-login-over {
+    bottom: 45px;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    border-color: #d0d0d0;
+    color: #404040;
+    font-size: 13px;
+    font-weight: 300;
+    height: 84px;
+}
+
+.content-login {
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 66px;
+    width: 100%;
+    bottom: 130px;
+}
+
+    .content-login .login-form {
+        width: 600px;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        box-shadow: 0 2px 7px rgba(0,0,0,.15);
+        -moz-box-shadow: 0 2px 7px rgba(0,0,0,.15);
+        -webkit-box-shadow: 0 2px 7px rgba(0,0,0,.15);
+        height: 375px;
+        position: relative;
+        left: calc(50% - 300px);
+        top: calc(50% - 187px);
+    }
+
+.login-form .left-login-form {
+    height: 376px;
+    background: url(../images/banner_login_be.jpg) no-repeat;
+    float: left;
+    display: block;
+    width: 248px;
+    background-size: 100% 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.login-form .right-login-form {
+    float: left;
+    width: calc(100% - 250px);
+    padding-top: 20px;
+    position: relative;
+    background: white;
+    height: 376px;
+}
+
+.right-login-form .element-form-login {
+    position: relative;
+    text-align: left;
+    margin: 0;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    min-height: 165px;
+}
+
+.element-form-login .label-element-form-login {
+    color: #026b97;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.element-form-login .title-element-form-login {
+    color: #212121;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: Roboto !important;
+}
+
+.element-form-login .input-form-login {
+    border: solid 1px #abc1de;
+    padding: 5px 10px 5px 10px;
+    height: 36px;
+    margin: 5px 0 1px 0;
+    color: #000;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    width: 306px;
+}
+
+.element-form-login .btn-login {
+    width: 310px;
+    cursor: pointer !important;
+    padding: 10px 0;
+    background-color: #026b97;
+    color: #fff !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    border-radius: 3px !important;
+    text-align: center;
+    margin-top: 26px;
+    margin-left: 22px;
+}
+
+.btn-login:hover {
+    background: #0088C2;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+.element-form-login .link-form-login a {
+    color: #0072bc;
+}
+
+.element-form-login .link-form-login {
+    display: flex;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.footer-login-over .manual-footer-login-over {
+    width: 610px;
+    position: relative;
+    left: calc(50% - 303px);
+    top: 16px;
+}
+
+.manual-footer-login-over a {
+    text-decoration: none;
+    color: #026b97;
+}
+
+.footer-login-over .time-work-footer-login-over {
+    font-size: 13px;
+    color: #757575;
+    font-weight: 400;
+    width: 670px;
+    position: relative;
+    left: calc(50% - 335px);
+    top: 20px;
+}
+
+/*#endregion */
+

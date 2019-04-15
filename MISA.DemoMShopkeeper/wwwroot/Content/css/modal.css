@@ -1,0 +1,651 @@
+﻿/*#region Modal chung*/
+/*Được add thêm khi hiển thị modal*/
+.full-screen {
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.modal-active {
+    display: block !important;
+}
+
+.modal-on-left {
+    left: 0 !important;
+}
+
+.modal-on-top {
+    top: 0 !important;
+}
+/*Phần nền che đi html trang*/
+.MISA-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgba(0,0,0,.6) !important;
+    border: none;
+}
+    /*Phần hiển thị modal*/
+    .MISA-modal .MISA-modal-box {
+        position: fixed;
+        z-index: 200;
+        border: 2px solid #dfdfdf;
+        border-radius: 3px;
+        background: #f0f0f0;
+    }
+        /*Phần title của modal*/
+        .MISA-modal .MISA-modal-box .MISA-modal-header {
+            font-size: 16px;
+            border-bottom: 1px solid #dfdfdf;
+            height: 41px;
+            line-height: 41px;
+            position: relative;
+            cursor: move;
+        }
+            /*Style tiêu đề modal*/
+            .MISA-modal .MISA-modal-box .MISA-modal-header .MISA-modal-title {
+                padding: 0 14px;
+                max-width: 710px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: #212121;
+                font-weight: 700;
+            }
+
+            /*Nút x ở trên modal*/
+            .MISA-modal .MISA-modal-box .MISA-modal-header .btn-close,
+            .MISA-modal .MISA-modal-box .MISA-modal-header .btn-full-screen {
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 11px;
+                right: 14px;
+                cursor: pointer !important;
+                opacity: 0.7;
+            }
+
+                .MISA-modal .MISA-modal-box .MISA-modal-header .btn-close .icon-close {
+                    background: url(../images/common-icon.png) no-repeat -1127px -127px;
+                    width: 100%;
+                    height: 100%;
+                }
+            /*Nút full màn hình*/
+            .MISA-modal .MISA-modal-box .MISA-modal-header .btn-full-screen {
+                right: 34px;
+            }
+
+                .MISA-modal .MISA-modal-box .MISA-modal-header .btn-close:hover,
+                .MISA-modal .MISA-modal-box .MISA-modal-header .btn-full-screen:hover {
+                    opacity: 1;
+                }
+
+                .MISA-modal .MISA-modal-box .MISA-modal-header .btn-full-screen .icon-full-screen {
+                    background: url('../images/Maximize.png') no-repeat center;
+                    width: 100%;
+                    height: 100%;
+                }
+        /*Nội dung modal chung*/
+        .MISA-modal .MISA-modal-box .MISA-modal-content {
+            background: #fff;
+            padding: 16px;
+            position: relative;
+            width: 100%;
+        }
+    /*Style input trong modal*/
+    .MISA-modal .MISA-modal-content .MISA-form-group {
+        display: flex;
+        margin-bottom: 8px;
+    }
+
+        .MISA-modal .MISA-modal-content .MISA-form-group .label-form {
+            width: 133px;
+        }
+
+.form-right .label-form {
+    padding-left: 16px;
+    white-space: nowrap;
+}
+
+.MISA-modal .MISA-modal-content .MISA-form-group .input-form {
+    width: calc(100% - 140px);
+    display: flex;
+    position: relative;
+}
+
+    .MISA-modal .MISA-modal-content .MISA-form-group .input-form input {
+        width: 100%;
+        height: 35px;
+        border: 1px solid #d0d0d0;
+        padding: 5px 10px;
+        border-radius: 3px;
+    }
+
+/*Chân modal chứa nút chức năng và nút đóng*/
+.MISA-modal .MISA-modal-box .MISA-modal-footer {
+    border-top: 1px solid #dfdfdf;
+    height: 51px;
+    position: relative;
+    background: #fff;
+}
+
+    .MISA-modal .MISA-modal-box .MISA-modal-footer .footer-right {
+        position: absolute;
+        right: 8px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+    }
+
+        .MISA-modal .MISA-modal-box .MISA-modal-footer .footer-right .MISA-btn {
+            position: relative;
+            margin-left: 8px;
+        }
+/*Style chung cho nút ở chân modal*/
+.MISA-modal .MISA-modal-footer .MISA-btn {
+    display: flex;
+    position: absolute;
+    height: 35px;
+    color: #247ba0;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    top: 14px;
+    padding: 7px;
+}
+
+    .MISA-modal .MISA-modal-footer .MISA-btn .btn-content {
+        padding: 0 7px;
+        line-height: 19px;
+        margin: auto 0;
+    }
+
+    .MISA-modal .MISA-modal-footer .MISA-btn .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+/*Icon dấu X ở chân modal*/
+.MISA-modal .MISA-modal-footer .footer-content .icon-close {
+    background: url('../images/common-icon.png') no-repeat;
+}
+    /*Style màu của nút X*/
+    .MISA-modal .MISA-modal-footer .footer-content .icon-close.icon-close-white {
+        background-position: -276px -127px;
+    }
+
+    .MISA-modal .MISA-modal-footer .footer-content .icon-close.icon-close-blue {
+        background-position: -252px -127px;
+    }
+
+/*#endregion*/
+
+/*#region Style cho modal thông tin*/
+
+
+.MISA-modal .modal-notification {
+    width: 750px !important;
+    height: 545px !important;
+    top: calc(50% - 273px);
+    left: calc(50% - 375px);
+}
+
+    .MISA-modal .modal-notification .MISA-modal-content {
+        height: 448px;
+    }
+
+    .MISA-modal .modal-notification .footer-content .btn-close {
+        background: #026b97;
+        border: 1px solid #026b97;
+        color: #fff;
+        font-family: 'Open Sans';
+        right: 14px;
+        top: 8px;
+    }
+/*#endregion*/
+
+/*#region Style cho modal thông báo*/
+.MISA-modal .modal-message-box {
+    width: 400px;
+    top: calc(50% - 100px);
+    left: calc(50% - 200px);
+}
+    /*Icon thông báo ở giữa*/
+    .MISA-modal .modal-message-box .message-box-icon {
+        background-image: url('../images/icon-popup.png');
+        background-repeat: no-repeat;
+        height: 44px;
+        width: 54px;
+        margin-right: 10px;
+    }
+        /*icon ? thông báo trợ giúp*/
+        .MISA-modal .modal-message-box .message-box-icon.icon-popup-help {
+            background-position: -168px 0px !important;
+        }
+        /*icon ! cảnh báo cần chú ý*/
+        .MISA-modal .modal-message-box .message-box-icon.icon-popup-warning {
+            background-position: -57px 0 !important;
+        }
+        /*icon X cảnh báo nguy hiểm*/
+        .MISA-modal .modal-message-box .message-box-icon.icon-popup-danger {
+            background-position: -113px 0 !important;
+        }
+        /*icon i thông báo tin tức*/
+        .MISA-modal .modal-message-box .message-box-icon.icon-popup-notify {
+            background-position: -4px 0 !important;
+        }
+
+    .MISA-modal .modal-message-box .MISA-modal-footer .MISA-btn {
+        top: 8px;
+    }
+/*Style nút đóng cho modal thông tin và modal thông báo*/
+.MISA-modal .MISA-modal-footer .btn-cancel {
+    border: 1px solid #fff;
+}
+
+    .MISA-modal .MISA-modal-footer .btn-cancel:hover,
+    .MISA-modal .modal-message-box .MISA-modal-footer .btn-not-save {
+        border: 1px solid #026b97;
+        background: none;
+    }
+
+        .MISA-modal .modal-message-box .MISA-modal-footer .btn-not-save .icon-not-save {
+            background: url('../images/not-save.png') no-repeat;
+        }
+
+
+
+/*.MISA-modal .modal-message-box .MISA-modal-footer .btn-cancel {
+        right: 8px !important;
+    }*/
+/*Style nút xóa*/
+.MISA-modal .MISA-modal-footer .btn-delete {
+    background: #df4646;
+    color: #fff;
+}
+
+    .MISA-modal .MISA-modal-footer .btn-delete:hover {
+        background: #df4646;
+    }
+
+.MISA-modal .MISA-modal-footer .icon-delete {
+    background: url(../images/common-icon.png) no-repeat -102px -203px;
+}
+
+
+/*#endregion*/
+
+/*#region Style Modal nhập khẩu khách hàng*/
+.modal-import {
+    width: 920px;
+    height: 600px;
+    top: calc(50% - 300px);
+    left: calc(50% - 460px);
+}
+
+    .modal-import .MISA-modal-content {
+        padding: 0px !important;
+        height: calc(100% - 106px) !important;
+    }
+
+    .modal-import a {
+        color: #237b9f !important;
+    }
+
+.content-status {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    padding: 7px 16px;
+    background: #ebebeb;
+    display: flex;
+}
+
+.header-import {
+    width: 31%;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+}
+
+    .header-import.active .header-import-content,
+    .dash.active {
+        background: #026b97;
+    }
+
+        .header-import.active .header-import-content .step-content {
+            color: #fff;
+        }
+
+        .header-import.active .header-import-content .step-number {
+            color: #89afc4;
+        }
+
+.header-import-content {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.step-number {
+    position: absolute;
+    left: 16px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ebebeb;
+}
+
+.step-content {
+    text-align: center;
+    color: #757575;
+}
+
+.dash {
+    width: 4%;
+    height: 3.5px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
+/*import-content*/
+.import-content {
+    width: 100%;
+    height: calc(100% - 60px);
+    background: #fff;
+    padding: 8px 16px;
+}
+
+.content-panel,
+.content-box {
+    display: flex;
+    padding-top: 4px;
+    height: 32px;
+    line-height: 32px;
+}
+
+    .content-panel .content-right {
+        display: flex;
+    }
+
+.content-box {
+    height: calc(100% - 35px);
+}
+/*Nội dung bên trái*/
+.content-left {
+    width: 125px;
+}
+
+/*Nội dung bên phải*/
+
+.content-right {
+    width: calc(100% - 125px);
+}
+
+    .content-right label {
+        margin-right: 8px;
+    }
+
+.area-choose-file {
+    display: flex;
+    border: 1px dashed #d0d0d0;
+    width: 100%;
+    height: calc(100% - 32px);
+    margin-top: 8px;
+}
+
+.box-choose-file {
+    margin: auto;
+    text-align: center;
+    color: #8d8d8d;
+}
+
+    .box-choose-file input {
+        display: none;
+    }
+
+.img-upload {
+    background: url('../images/icon-file-gray-32.png') no-repeat;
+    height: 36px;
+    width: 32px;
+    margin: auto;
+    margin-bottom: 7px;
+}
+
+.btnUploadFile {
+    font-weight: bold;
+}
+/*footer*/
+.btn-continue {
+    background: #026b97;
+}
+
+    .btn-continue .btn-content {
+        color: #fff;
+    }
+
+.icon-continue-white {
+    background-position-x: -427px;
+}
+/*#endregion*/
+
+/*#region Style cho modal tool*/
+.MISA-modal .modal-tool-customer {
+    width: 700px !important;
+    /*height: 653px !important;*/
+    top: calc(50% - 326px);
+    left: calc(50% - 350px);
+}
+
+    .MISA-modal .modal-tool-customer .MISA-modal-content {
+        /*min-height: 550px;*/
+        padding-bottom: 0;
+        overflow-y: auto;
+    }
+
+        .MISA-modal .modal-tool-customer .MISA-modal-content .content-title {
+            text-transform: uppercase;
+            font-size: 15px;
+            color: #757575;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .MISA-modal .modal-tool-customer .MISA-modal-content .content-form {
+            margin-top: 10px;
+            line-height: 35px;
+        }
+
+/*Style chân modal chức năng*/
+.MISA-modal.modal-tool .MISA-modal-footer {
+    background: #fff;
+    height: 65px;
+}
+/*Các nút ở chân modal tool*/
+.MISA-modal .MISA-modal-footer .btn-help {
+    left: 8px;
+}
+
+    .MISA-modal .MISA-modal-footer .btn-help:hover {
+        background: #E5E6EB;
+    }
+
+.MISA-modal .MISA-modal-footer .icon-help {
+    background: url('../images/help.png') no-repeat 3px 1px;
+    width: 16px;
+    height: 16px;
+}
+
+.MISA-modal .MISA-modal-footer .btn-save {
+    background: #026b97;
+    color: #fff;
+    border: 1px solid #026b97;
+}
+
+    .MISA-modal .MISA-modal-footer .btn-save:hover {
+        background: #0088c2;
+    }
+
+.modal-add-quick-customer-group .MISA-btn {
+    top: 8px !important;
+}
+
+.MISA-modal .MISA-modal-footer .icon-save {
+    background: url(../images/common-icon.png) no-repeat -327px -127px;
+}
+
+.MISA-modal .MISA-modal-footer .btn-saveAs,
+.MISA-modal .modal-message-box .MISA-modal-footer .btn-not-save {
+    border: 1px solid #026b97;
+}
+
+    .MISA-modal .MISA-modal-footer .btn-saveAs:hover,
+    .MISA-modal .modal-message-box .MISA-modal-footer .btn-not-save:hover {
+        color: #0088c2;
+        background: none;
+    }
+
+.MISA-modal .MISA-modal-footer .icon-saveAs {
+    background: url(../images/common-icon.png) no-repeat -26px -128px;
+}
+/*#endregion*/
+
+/*#region Style các input trong modal*/
+/*Các input có chứa hình ảnh bên trong.*/
+/*Input select, input datetime*/
+.input-date input:focus + .btn-drop-down,
+.input-select input:focus + .btn-drop-down,
+.input-select-add input:focus + .btn-drop-down,
+.input-select-add input:focus + .btn-drop-down + .btn-add-new {
+    border-top-color: #77B0E2;
+    border-bottom-color: #77B0E2;
+}
+
+    .input-date input:focus + .btn-drop-down,
+    .input-select input:focus + .btn-drop-down,
+    .input-select-add input:focus + .btn-drop-down + .btn-add-new {
+        border-right-color: #77B0E2;
+    }
+
+.input-date .btn-drop-down,
+.input-select .btn-drop-down,
+.input-select-add .btn-drop-down,
+.input-select-add .btn-add-new {
+    width: 24px;
+    height: 35px;
+    border: 1px solid #d0d0d0;
+    border-right: none;
+    border-left: none;
+    cursor: pointer;
+    background:#fff;
+}
+
+.input-date .btn-drop-down,
+.input-select .btn-drop-down {
+    border-right: 1px solid #d0d0d0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.input-select-add .icon-arrow-down,
+.input-select .icon-arrow-down {
+    background: url(../images/arrow-down-line.png) no-repeat;
+    margin: 15px 8px;
+    width: 10px;
+    height: 10px;
+}
+
+.input-select-add .btn-add-new {
+    border: 1px solid #d0d0d0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+    .input-select-add .btn-add-new .icon-add-new {
+        background: url('../images/quick-add.png') no-repeat;
+        width: 12px;
+        height: 19px;
+        margin: 10px 5px;
+    }
+/*Input nhập địa chỉ*/
+.input-select-address {
+    width: calc(100% - 140px);
+    display: flex;
+}
+
+    .input-select-address input {
+        width: 152px;
+    }
+
+    .input-select-address input,
+    .input-select-address .btn-drop-down {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+        .input-select-address input[name='city'] + .btn-drop-down {
+            border-top-right-radius: 0;
+        }
+
+        .input-select-address input[name='wards'] {
+            border-top-left-radius: 0;
+        }
+
+        .input-select-address input[name='district'] {
+            margin-left: -1px;
+            border-radius: 0;
+        }
+
+            .input-select-address input[name='district'] + .btn-drop-down {
+                border-radius: 0;
+            }
+
+.input-address input {
+    width: 100%;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+.input-select .icon-select-date,
+.input-date .icon-select-date {
+    background: url('../images/common-icon.png') no-repeat 0 -169px;
+    width: 24px;
+    height: 33px;
+}
+/*Textarea nhập ghi chú*/
+.input-note textarea {
+    width: 100%;
+    padding: 8px 10px 8px !important;
+    height: 100%;
+    resize: none;
+    min-height: 80px;
+    line-height: normal;
+    border-radius: 3px;
+}
+
+.form-group-up {
+    margin-top: -8px;
+}
+/*Style lại checkbox ở modal chức năng sửa*/
+.MISA-modal .lb-checkbox {
+    padding-left: 16px;
+    margin-right: 4px;
+}
+
+/*Style modal thêm nhanh nhóm khách hàng*/
+.modal-add-quick-customer-group {
+    width: 500px !important;
+    top: calc(50% - 183px);
+    left: calc(50% - 250px);
+}
+
+    .modal-add-quick-customer-group .label-form {
+        line-height: 35px;
+    }
+/*#endregion*/
